@@ -1,4 +1,4 @@
-#exercise 7
+# exercise 7 #
 
 import turtle              
 wn = turtle.Screen() 
