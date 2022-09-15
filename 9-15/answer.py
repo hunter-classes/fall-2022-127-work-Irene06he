@@ -15,16 +15,16 @@ def is_odd(n):
         return False
 
 # exercise 7.10 #
-def is_rightangled(a, b, c):
-    is_rightangled = False
+def isRightAngle(a,b,c):
+    return a*a + b*b == c*c
 
-    if a > b and a > c:
-        is_rightangled = abs(b**2 + c**2 - a**2) < 0.001
-    elif b > a and b > c:
-        is_rightangled = abs(a**2 + c**2 - b**2) < 0.001
-    else:
-        is_rightangled = abs(a**2 + b**2 - c**2) < 0.001
-    return is_rightangled
+def isRightAngle2(a,b,c):
+    return isRightAngle(a,b,c) or \
+            isRightAngle(b,c,a) or \
+            isRightAngle(a,c,b)
+
+print(isRightAngle2(5,3,4))
+
 
 # exercise 7.11 #
 from test import testEqual
