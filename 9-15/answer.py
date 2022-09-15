@@ -9,8 +9,8 @@ def is_even(n):
 # exercise 7.8 #
 
 def is_odd(n):
-    if n + 2 == 0 :
-        return Ture
+    if n%2 + 1 == 0 :
+        return True
     else:
         return False
 
