@@ -5,8 +5,8 @@ def bondify(name):
     returns: a string in the form "Last, First Last"
     """
     result = " "
-    last = name[0] 
-    last = last.upper()
+    last = name[0:] 
+    last = last[0].upper()+last[1:5]
     last = result + last
 
     first = name[0:]
@@ -14,10 +14,14 @@ def bondify(name):
     first = result + first
     
     location = name.find (' ')
-    first = name[locations+1:].capitalize()
+    first = name[location+1:].capitalize()
     
     result = result + last + ","+ "" + first + last
     return result
+
+#Testing
+result = bondify("james bond")
+print("james bond --> ",result)
 
 # piglatin #
 
@@ -35,10 +39,22 @@ If the first letter is a vowel, just add "yay" to the end
 try to also handle upper case words
 
 """
-    if word[0] in "aeiou":
-        return word + 'yay'
-    else:
-        return word[1:] + word[0] + 'ay'
+ def piglatinify(word):
 
-word = input("Enter a word you want to convert to pig latin: ")
-print(' '.join(piglatin(word)))
+    first = word[0]
+    if first in 'aeiou':
+        result = word + 'ay'
+    else:
+        # move first letter to end and add 'ay'
+        result = word[1:]+first+'ay'
+    
+    return result
+
+#Testing
+test_word = "hello"
+result = piglatinify(test_word)
+print(test_word," -> ",result)
+
+test_word = "able"
+result = piglatinify(test_word)
+print(test_word," -> ",result)
