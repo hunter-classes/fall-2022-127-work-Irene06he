@@ -13,7 +13,7 @@ list = [2,3,4]
 def sum_of_squares(xs):
     SumSquares = 0
     for i in xs:
-        SumSquares += i ** 2
+        SumSquares += i * i
     return SumSquares
 
 print(sum_of_squares(list))
