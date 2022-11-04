@@ -6,7 +6,7 @@ f.close()
 
 
 hero = ['Charles','Rachael','Joey','Anna','Ben','Ryan','Lawren']
-verb = ['plays','gets','finishes','learns','eats','walks','runs']
+verb = ['plays','works','writes','learns','eats','walks','runs']
 noun = ['library','playground','classroom','bedroom','street','hallway']
 
 def gets_newstory (story)  :
