@@ -6,7 +6,7 @@ print(pirate_speak)
 
 pirate_speak = pirate_speak.lower()
 dictionary = {'hello': "ahoy",
-              'matey':"everybody",
+              'everybody':"matey",
               'lucky person': "piston proof",
               'you':"ye",
               'friend':"bucko",
@@ -25,5 +25,6 @@ def get_translate(pirate_speak):
     return pirate_speak.capitalize()
 print(get_translate(pirate_speak))
 
-x = get_translate(pirate_speak)
-print( '. '.join(map(lambda s: s.strip().capitalize(), x.split('.'))))
+new_pirate_speak = get_translate(pirate_speak)
+print( '. '.join(map(lambda s: s.strip().capitalize(), new_pirate_speak.split('.'))))
+
