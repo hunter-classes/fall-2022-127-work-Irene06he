@@ -1,5 +1,6 @@
 # I finished one extra : Use more than one data source and have my analysis compare,contrast, or correlate them.
 
+# First data source - wind turbines
 # Basic 
 import csv
 
@@ -18,7 +19,7 @@ def get_Height(height):
   return average
 print("The average of total height of the turbine:", get_Height(height))
 
-# Second data source
+# Second data source - hydropower
 # Basic 
 import csv
 
@@ -37,7 +38,8 @@ def get_Height(Structural_Height):
   return average
 print("The average of Structural Height:", get_Height(Structural_Height))
 
-# Compare
+# Compare average of the total height of the turbines and the structural height of the hydropower
+
 if get_Height(height) < get_Height(Structural_Height):
   print("The average of Structural Height is greater than the average of total height of the turbine")
 else:
